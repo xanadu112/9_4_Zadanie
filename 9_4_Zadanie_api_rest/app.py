@@ -30,7 +30,7 @@ def create_book():
         'title': request.json['title'],
         'author': request.json['author'],
         'description': request.json.get('description', ""),
-        'num_pages': request.json['num_pages'],
+        'num_pages': request.json.get['num_pages', ""],
         'read': False
     }
     books.create(book)
