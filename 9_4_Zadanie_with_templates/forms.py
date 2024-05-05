@@ -7,6 +7,6 @@ class BookForm(FlaskForm):
     author = StringField("Author", validators=[DataRequired()])
     description = TextAreaField("Description", validators=[DataRequired()])
     num_pages = IntegerField("Number of pages", validators=[DataRequired()])
-    read = BooleanField("Has it been read?", validators=[DataRequired()])
+    read = BooleanField("Has it been read?")
     
     submit = SubmitField("Add Book")
